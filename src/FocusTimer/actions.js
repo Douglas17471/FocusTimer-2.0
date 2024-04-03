@@ -13,35 +13,79 @@ export function toggleRunning() {
 export function reset() {
   state.isRunning = false
   timer.updateDisplay()
+  setMinutes()
 }
 
 export function plus() {
   timer.plus()
+  state.isRunning = false
 }
 
 export function minus() {
   timer.minus()
+  state.isRunning = false
 }
 
 
 export function musicFloresta() {
-sounds.soundsFloresta()
-
+  floresta()
 }
 export function musicChuva() {
-  state.isMute = !state.isMute
-  if (!state.isMute) {
-    sounds.chuva.play()
-  }
+  chuva()
 }
 export function musicCafeteria() {
-  state.isMute = !state.isMute
-  sounds.cafeteria.play()
-
+  caffe()
 }
 export function musicLareira() {
+  lareira()
+}
+
+
+// controls
+function floresta() {
   state.isMute = !state.isMute
-  sounds.lareira.play()
+  if(!state.isMute){
+  sounds.floresta.play()
+  sounds.chuva.pause()
+  sounds.cafeteria.pause()
+  sounds.lareira.pause()
+ } else {
+  sounds.floresta.pause()
+ }
+}
 
+function chuva() {
+  state.isMute = !state.isMute
+  if(!state.isMute){
+    sounds.chuva.play()
+    sounds.cafeteria.pause()
+    sounds.lareira.pause()
+    sounds.floresta.pause()
+  } else {
+     sounds.chuva.pause()
+   }
+}
 
+function caffe() {
+  state.isMute = !state.isMute
+  if(!state.isMute){
+    sounds.cafeteria.play()
+    sounds.chuva.pause()
+    sounds.lareira.pause()
+    sounds.floresta.pause()
+  } else {
+     sounds.cafeteria.pause()
+   }
+}
+
+function lareira() {
+  state.isMute = !state.isMute
+  if(!state.isMute){
+    sounds.lareira.play()
+    sounds.chuva.pause()
+    sounds.cafeteria.pause()
+    sounds.floresta.pause()
+   } else {
+    sounds.lareira.pause()
+   }
 }

@@ -4,6 +4,9 @@ import { reset } from "./actions.js";
 
 
 export function countdowm() {
+  
+  clearTimeout(state.countdownID)
+
   if(!state.isRunning) {
     return
   }
@@ -24,7 +27,7 @@ export function countdowm() {
   }
 
   updateDisplay(minutes, seconds)
-  setTimeout(() => countdowm(), 1000)
+  state.countdownID = setTimeout(() => countdowm(), 1000)
 }
 
 export function plus() {
