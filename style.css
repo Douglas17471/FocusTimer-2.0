@@ -1,0 +1,89 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+
+  
+  display: grid;
+  height: 100vh;
+  place-content: center;
+}
+
+.app{
+  display: flex;
+
+}
+
+.flex {
+  display: flex;
+}
+
+.part {
+  width: 32.1rem;
+  display: grid;
+  place-content: center;
+}
+
+#timer {
+  font-size: 12.7rem;
+  color: #323238;
+
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+#controls {
+  margin-top: 1.6rem;
+
+  gap: 4.0rem;
+}
+
+#controls button {
+  font-size: 4.8rem;
+  border: none;
+  background-color: transparent;
+
+  border-color: #323238;
+}
+
+#sounds {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+
+  gap: 3.2rem;
+  margin-left: 19.2rem;
+}
+
+#sounds button {
+  width: 13.8rem;
+  height: 15.2rem; 
+
+  font-size: 5.6rem;
+
+  border-radius: 2.4rem;
+  background: #E1E1E6;
+
+  border: none;
+}
+
+#sounds button:focus, #sounds button:active {
+  background: #02799d;
+  color: white;
+}
+
+button {
+  cursor: pointer;
+}

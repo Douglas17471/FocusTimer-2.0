@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <title>Focus Timer 2.0</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <script defer type="module" src="./src/srcipt.js"></script>
+
+</head>
+<body>
+
+  <div class="app">
+
+    <div class="part">
+      <section id="timer" class="flex">
+
+        <span id="minutes">00</span>
+        <span>:</span>
+        <span id="seconds">00</span>
+
+      </section>
+
+      <section id="controls" class="flex">
+
+        <button data-action="toggleRunning" class="ph ph-play-circle"></button>
+        <button data-action="reset" class="ph ph-stop-circle secondary"></button>
+        <button data-action="plus" class="ph ph-plus"></button>
+        <button data-action="minus" class="ph ph-minus"></button>
+
+      </section>
+    </div>
+
+    <section id="sounds">
+
+      <button data-actiona="musicFloresta" class="ph ph-tree"></button>
+      <button data-actiona="musicChuva" class="ph ph-cloud-snow"></button>
+      <button data-actiona="musicCafeteria" class="ph ph-storefront"></button>
+      <button data-actiona="musicLareira" class="ph ph-fire"></button>
+
+    </section>
+
+
+  </div>
+
+</body>
+</html>
